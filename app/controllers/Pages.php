@@ -3,13 +3,18 @@
 class Pages extends Controller{
     public function __construct()
     {
-        $this->view('hello'); // Corrected the syntax here
+        // Corrected the syntax here
     }
 
     public function index(){
-     
+        $data=[
+            'title'=>'welcome'
+        ];
+        $this->view('app/views/pages/index.php', $data); 
     }
-    public function about($id){
-       echo $id;
+    public function about(){
+   
+        $this->view('pages/about.php'); 
+
     }
 }
